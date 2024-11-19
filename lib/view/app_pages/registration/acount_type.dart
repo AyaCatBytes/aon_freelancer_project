@@ -30,12 +30,12 @@ class AcountType extends StatelessWidget {
       backgroundColor: Colors.white,
       //appBar: AppBar(),
       body: Container(
-        // color: Colors.white,
+         color: Colors.white,
         //padding: EdgeInsets.only(top: screenSize.height(10)),
         margin: EdgeInsets.symmetric(
             horizontal: screenSize.width(24), vertical: screenSize.height(48)),
-        child:Obx(
-    () =>Column(
+        child:SingleChildScrollView(
+          child:Obx(()=>Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -138,12 +138,15 @@ class AcountType extends StatelessWidget {
                 size: 21.42,
               ),
             onPressed: (){
-                Get.to(PhoneInputWidget());
+                Get.to(() =>PhoneInputWidget());
             }
           ),
 ]
-              ),)
-),
+              ),
+        ),)
+
+      ),
+
 
 
 

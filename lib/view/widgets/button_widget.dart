@@ -6,33 +6,36 @@ import '../util/icons.dart';
 import 'custom_text_widget.dart';
 
 class ButtonWidget extends StatelessWidget {
-
   final String buttonColor;
   final String textColor;
   final String text;
-  final Widget icon;
+  final Widget? icon;
   final VoidCallback onPressed;
 
-
-  const ButtonWidget({super.key, required this.buttonColor, required this.textColor, required this.text, required this.icon, required this.onPressed});
+  const ButtonWidget(
+      {super.key,
+      required this.buttonColor,
+      required this.textColor,
+      required this.text,
+       this.icon,
+      required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
+    return TextButton(
       onPressed: onPressed,
-      style: ElevatedButton.styleFrom(
-
+      style: TextButton.styleFrom(
         backgroundColor: HexaColor(buttonColor),
-       // foregroundColor: HexaColor("999999"),
+        // foregroundColor: HexaColor("999999"),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16.0), // rounded corners
         ),
         padding: const EdgeInsets.symmetric(vertical: 16.0),
       ),
-      child:  Row(
+      child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-           CustomTextWidget(
+          CustomTextWidget(
             text: text,
             color: textColor,
             size: 16,
@@ -40,9 +43,10 @@ class ButtonWidget extends StatelessWidget {
             fontFamily: 'Exo',
           ),
           const SizedBox(width: 8.0),
-          icon,
-
-
+          if (icon != null) ...[
+            const SizedBox(width: 8.0),
+            icon!,
+          ],
         ],
       ),
     );
