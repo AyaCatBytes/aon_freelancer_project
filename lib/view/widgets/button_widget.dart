@@ -1,9 +1,10 @@
-import 'package:aon_freelancer_project/widgets/hexa_color.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../util/icons.dart';
+
 import 'custom_text_widget.dart';
+import 'hexa_color.dart';
 
 class ButtonWidget extends StatelessWidget {
   final String buttonColor;

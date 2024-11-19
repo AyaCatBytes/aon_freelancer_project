@@ -6,6 +6,7 @@ class HexaColor extends Color{
 
   HexaColor(this.color) : super(_hexColor(color));
 
+
   static int _hexColor(String color){
 
     return  int.parse("0xff$color");

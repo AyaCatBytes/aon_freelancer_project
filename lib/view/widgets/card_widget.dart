@@ -1,12 +1,12 @@
-import 'package:aon_freelancer_project/widgets/button_widget.dart';
-import 'package:aon_freelancer_project/widgets/poppins_text_widget.dart';
-import 'package:aon_freelancer_project/widgets/screen_size.dart';
+
+
+import 'package:aon_freelancer_project/view/widgets/screen_size.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../controller/button_controller.dart';
-import '../controller/card_controller.dart';
-import '../util/icons.dart';
+
+import '../../controller/button_controller.dart';
+import '../../controller/card_controller.dart';
 import 'card_container.dart';
 import 'custom_text_widget.dart';
 import 'hexa_color.dart';
@@ -14,8 +14,8 @@ import 'hexa_color.dart';
 //final CardController controller =Get.find();
 class CardWidget extends StatelessWidget {
   final Widget iconWidget;
-  final CustomTextWidget titleText;
-  final CustomTextWidget subTitleText;
+  final Text titleText;
+  final Text subTitleText;
   final String cardType;
 
   CardWidget(

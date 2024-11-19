@@ -1,5 +1,7 @@
 
-import 'package:aon_freelancer_project/view/registration/acount_type.dart';
+
+import 'package:aon_freelancer_project/view/app_pages/registration/acount_type.dart';
+import 'package:aon_freelancer_project/view/app_pages/registration/verify_phone_number.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -17,7 +19,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme:ThemeData(
+        fontFamily: "Poppins",
+      ),
       initialBinding: MyBindings(),
+
       home:AcountType(),
     );
   }

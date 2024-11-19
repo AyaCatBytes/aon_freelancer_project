@@ -1,4 +1,5 @@
-import 'package:aon_freelancer_project/widgets/screen_size.dart';
+
+import 'package:aon_freelancer_project/view/widgets/screen_size.dart';
 import 'package:flutter/cupertino.dart';
 
 import 'hexa_color.dart';

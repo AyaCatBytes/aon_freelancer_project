@@ -1,10 +1,12 @@
 import 'package:aon_freelancer_project/controller/button_controller.dart';
-import 'package:aon_freelancer_project/view/registration/acount_type.dart';
-import 'package:aon_freelancer_project/widgets/poppins_text_widget.dart';
+import 'package:aon_freelancer_project/view/app_pages/registration/verify_phone_number.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../controller/card_controller.dart';
+
+import '../../styles/app_colors.dart';
+import '../../styles/app_text_styles.dart';
 import '../../widgets/button_widget.dart';
 import '../../widgets/card_container.dart';
 import '../../widgets/card_widget.dart';
@@ -14,6 +16,8 @@ import '../../widgets/screen_size.dart';
 import '../../widgets/hexa_color.dart';
 import '../../widgets/three_pi.dart';
 import 'package:aon_freelancer_project/util/icons.dart';
+
+import 'acount_type.dart';
 
 class PhoneInputWidget extends StatelessWidget {
   PhoneInputWidget({super.key});
@@ -39,8 +43,8 @@ class PhoneInputWidget extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     //the progress indicator-----------------
-                    const ThreePi(
-                        color1: "3C97AF", color3: "BFBFBF", isHalfHalfPI: true),
+                     ThreePi(
+                        color1: AppColors.primary, color3: AppColors.darkGrey, isHalfHalfPI: true),
 
                     //space
                     SizedBox(
@@ -48,13 +52,11 @@ class PhoneInputWidget extends StatelessWidget {
                     ),
 
                     //Enter Your Phone Number-----------------------------
-                    const CustomText2Widget(
-                      text: "Enter Your Phone Number",
-                      color: "000000",
-                      size: 32,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: 'Poppins',
+                    Text(
+                      "Enter Your Phone Number",
+                      style: AppTextStyles.heading1,
                     ),
+
 
                     //space
                     SizedBox(
@@ -62,29 +64,23 @@ class PhoneInputWidget extends StatelessWidget {
                     ),
 
                     //sub title --------------------------------
-
-                    const CustomText2Widget(
-                      text:
-                          "Enter your phone number to verify your identity and the validity of your number to safely activate your account on the platform.",
-                      color: "999999",
-                      size: 16,
-                      fontWeight: FontWeight.normal,
-                      fontFamily: 'Poppins',
+                    Text(
+                      "Enter your phone number to verify your identity and the validity of your number to safely activate your account on the platform.",
+                      style: AppTextStyles.heading2,
                     ),
-                    //space
+
+
                     SizedBox(
                       height: screenSize.height(47),
                     ),
 
                     //phone Number- text-----------------------------------------------
-
-                    const CustomText2Widget(
-                      text: "Phone Number",
-                      color: "0A0A0A",
-                      size: 14,
-                      fontWeight: FontWeight.w500,
-                      fontFamily: 'Poppins',
+                    Text(
+                      "Phone Number",
+                      style: AppTextStyles.inputLabel,
                     ),
+
+
                     //space
                     SizedBox(
                       height: screenSize.width(10),
@@ -101,9 +97,9 @@ class PhoneInputWidget extends StatelessWidget {
                               horizontal: screenSize.width(10),
                               vertical: screenSize.height(10)),
                           decoration: BoxDecoration(
-                            color: HexaColor("FFFFFF"),
+                            color: AppColors.white,
                             borderRadius: BorderRadius.circular(8),
-                            border: Border.all(color: HexaColor("BFBFBF")),
+                            border: Border.all(color: AppColors.darkGrey),
                           ),
 
                           //row to add image of flag and the country code----------
@@ -126,13 +122,12 @@ class PhoneInputWidget extends StatelessWidget {
                                 ),
 
                                 //the contry code----------
-                                CustomText2Widget(
-                                  text: "+946",
-                                  color: "0A0A0A",
-                                  size: 14,
-                                  fontWeight: FontWeight.normal,
-                                  fontFamily: 'Poppins',
+                                Text(
+                                  "+946",
+                                  style: AppTextStyles.countryCode,
                                 ),
+
+
                               ])),
                       //space
                       SizedBox(
@@ -141,24 +136,22 @@ class PhoneInputWidget extends StatelessWidget {
 
                       //container for the textFromfiled phone number------------
 
-                      Expanded(
+                      SizedBox(
+                        height: screenSize.height(48), width: screenSize.width(246.02),
                         child: TextFormField(
 
 
                           controller: phoneFT_controller,
                           keyboardType: TextInputType.phone,
-                          cursorColor: HexaColor("3C97AF"),
+                          cursorColor: AppColors.primary,
                           decoration: InputDecoration(
                             contentPadding: const EdgeInsets.symmetric(
-                                vertical: 14.50, horizontal: 15.0),
+                                vertical: 10, horizontal: 10),
                             //the hinttext style-----------------
                             floatingLabelBehavior: FloatingLabelBehavior.never,
-                            label: const CustomTextWidget(
-                              text: "EnterYourPhoneNumber",
-                              color: "D9D9D9",
-                              size: 14,
-                              fontWeight: FontWeight.normal,
-                              fontFamily: 'Poppins',
+                            label:   Text(
+                              "EnterYourPhoneNumber",
+                              style: AppTextStyles.hintText,
                             ),
 
                             //the border style------------------------
@@ -191,7 +184,7 @@ class PhoneInputWidget extends StatelessWidget {
                         text: "Send verification code",
                         onPressed: () {
                           buttonController.whenSelectingCard();
-                          Get.to(() => AcountType());
+                          Get.to(() => VerifyPhoneNumber());
                           print(buttonController.buttonColor.value);
                         }),
                   ])))),

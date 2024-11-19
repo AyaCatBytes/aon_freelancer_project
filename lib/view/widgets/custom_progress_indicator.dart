@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'hexa_color.dart';
 
 class CustomProgressIndicator extends StatelessWidget {
-  final String color;
+  final Color color;
   final double height;
   final double width;
 
@@ -20,7 +20,7 @@ class CustomProgressIndicator extends StatelessWidget {
       width: width,
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.all(Radius.circular(50)),
-        color: HexaColor(color),
+        color: color,
       ),
     );
   }
