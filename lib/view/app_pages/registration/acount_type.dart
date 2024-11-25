@@ -25,7 +25,7 @@ class AcountType extends StatelessWidget {
     final buttonController = Get.find<ButtonController>();
     ScreenSize screenSize = ScreenSize(context);
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor:AppColors.homeBackground,
       //appBar: AppBar(),
       body: Container(
           color: Colors.white,

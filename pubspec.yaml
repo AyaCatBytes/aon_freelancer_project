@@ -77,6 +77,12 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
+    - family: SourceSansPro
+      fonts:
+        - asset: fonts/source-sans-pro/SourceSansPro-Regular.otf
+          weight: 400
+
+
     - family: Exo
       fonts:
         - asset: fonts/exo/Exo-Regular.ttf

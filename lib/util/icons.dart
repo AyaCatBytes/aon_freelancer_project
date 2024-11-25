@@ -72,7 +72,7 @@ class ProjectIcons {
   static Widget paintBoard({Color color = Colors.black, double size = 24.0}) =>
       icon('07_paint-board.svg', color: color, size: size);
 
-  static Widget userSearch({Color color = Colors.black, double size = 24.0}) =>
+  static Widget userSearch({Color color = Colors.black, double size = 10.0}) =>
       icon('07_user-search-01.svg', color: color, size: size);
 
   static Widget edit({Color color = Colors.black, double size = 24.0}) =>
@@ -112,5 +112,5 @@ class ProjectIcons {
       icon('documents.svg', color: color, size: size);
 
   static Widget media ({Color color = Colors.black, double size = 24.0}) =>
-      icon('media.svg', color: color, size: size);
+      icon('media_icon.svg', color: color, size: size);
 }

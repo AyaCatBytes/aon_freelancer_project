@@ -17,7 +17,7 @@ class VerifyPhoneNumber extends StatelessWidget {
 
     ScreenSize screenSize = ScreenSize(context);
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor:AppColors.homeBackground,
       body: SingleChildScrollView(
         child: Obx(()=>Container(
             color: Colors.white,
